@@ -105,7 +105,7 @@ jobs:
             REGISTRY_URL=$REGISTRY
             IMAGE_NAME=$IMAGE_NAME
             IMAGE_TAG=${IMAGE_TAG:0:17}
-            HOST_PORT=80
+            HOST_PORT=8080
             CONTAINER_PORT=3000
             NODE_ENV=production
             EOF

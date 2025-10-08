@@ -1,12 +1,10 @@
-version: "3.8"
-
 services:
   web:
     image: ${REGISTRY_URL}/${IMAGE_NAME}:${IMAGE_TAG:-latest}
     container_name: sandbox-cicd-app
     restart: unless-stopped
     ports:
-      - "${HOST_PORT:-80}:${CONTAINER_PORT:-3000}"
+      - "${HOST_PORT:-8080}:${CONTAINER_PORT:-3000}"
     environment:
       - NODE_ENV=production
       - PORT=${CONTAINER_PORT:-3000}
